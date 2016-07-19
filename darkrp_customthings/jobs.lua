@@ -89,12 +89,13 @@ TEAM_ANDREW = DarkRP.createJob("Andrews Custom Job", {
    command = "/ACJ",
    max = 1,
    salary = 250,
-   admin = 2,
+   admin = 0,
    vote = false,
    hasLicense = true,
    candemote = true,
    category = "Custom Jobs",
-   custom = function(ply) return ply:GetNWString("usergroup") == "donator" end
+   customCheck = function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end, -- The extra check function. Enter nil or nothing to not have a restriction
+   CustomCheckFailMsg = "This job is Donator only!" -- Allows you to tell the user what went wrong when attempting to switch job
 })
 
    TEAM_DANI = DarkRP.createJob("Danis Custom Job", {
@@ -105,12 +106,13 @@ TEAM_ANDREW = DarkRP.createJob("Andrews Custom Job", {
    command = "/DCJ",
    max = 1,
    salary = 250,
-   admin = 2,
+   admin = 0,
    vote = false,
    hasLicense = true,
    candemote = true,
    category = "Custom Jobs",
-   custom = function(ply) return ply:GetNWString("usergroup") == "donator" end
+   customCheck = function(ply) return ply:GetUserGroup() == "donator" or ply:IsAdmin() end, -- The extra check function. Enter nil or nothing to not have a restriction
+   CustomCheckFailMsg = "This job is Donator only!" -- Allows you to tell the user what went wrong when attempting to switch job
 })
 
 
