@@ -36,7 +36,7 @@ Theif = DarkRP.createJob("Thief", {
    mayor = false,
    hobo = false,
    cook = false,
-   category = "thief",
+   category = "Citizens",
 })
 
 owner = DarkRP.createJob("Owner", {
@@ -93,7 +93,7 @@ TEAM_ANDREW = DarkRP.createJob("Andrews Custom Job", {
    vote = false,
    hasLicense = true,
    candemote = true,
-   category = "",
+   category = "Custom Jobs",
    custom = function(ply) return ply:GetNWString("usergroup") == "donator" end
 })
 
@@ -109,7 +109,7 @@ TEAM_ANDREW = DarkRP.createJob("Andrews Custom Job", {
    vote = false,
    hasLicense = true,
    candemote = true,
-   category = "",
+   category = "Custom Jobs",
    custom = function(ply) return ply:GetNWString("usergroup") == "donator" end
 })
 
