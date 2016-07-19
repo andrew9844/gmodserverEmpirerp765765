@@ -28,3 +28,12 @@ DarkRP.createCategory{
    canSee = function(ply) return table.HasValue({"Superadmin"}, ply:GetNWString("usergroup")) end,
    sortOrder = 25,
 }
+
+DarkRP.createCategory{
+   name = "STAFF",
+   categorises = "jobs",
+   startExpanded = true,
+   color = Color(255, 0, 15, 255),
+   canSee = function(ply) return table.HasValue({"admin"}, ply:GetNWString("usergroup")) end,
+   sortOrder = 25,
+}
